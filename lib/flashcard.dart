@@ -5,7 +5,6 @@ import 'package:alphaapplication/Flashcardprovider.dart';
 class Flashcard extends StatelessWidget {
   const Flashcard({super.key});
 
-  // ADD FLASHCARD
   void showAddCardDialog(BuildContext context) {
     showDialog(
       context: context,
@@ -19,7 +18,6 @@ class Flashcard extends StatelessWidget {
     );
   }
 
-  // EDIT FLASHCARD
   void showEditCardDialog(BuildContext context) {
     final provider = context.read<FlashcardProvider>();
 
@@ -43,7 +41,6 @@ class Flashcard extends StatelessWidget {
     );
   }
 
-  // DELETE FLASHCARD
   Future<void> confirmDeleteCard(BuildContext context) async {
     final provider = context.read<FlashcardProvider>();
 
@@ -109,8 +106,6 @@ class Flashcard extends StatelessWidget {
               style: const TextStyle(fontSize: 15, color: Colors.grey),
             ),
             const SizedBox(height: 30),
-
-            // FLASHCARD DISPLAY
             Expanded(
               child: Center(
                 child: Container(
@@ -266,7 +261,6 @@ class Flashcard extends StatelessWidget {
 
             const SizedBox(height: 10),
 
-            // EDIT AND DELETE
             Row(
               children: [
                 Expanded(
@@ -301,8 +295,6 @@ class Flashcard extends StatelessWidget {
   }
 }
 
-// FORM DIALOG
-// This widget owns its controllers and disposes them safely.
 class CardFormDialog extends StatefulWidget {
   final String title;
   final String buttonText;
